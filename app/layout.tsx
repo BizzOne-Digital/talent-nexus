@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Talent Nexus — Pakistan's Premier Recruitment Agency",
-  description: "Connecting international companies with top-tier Pakistani professionals in digital marketing, remote operations, and tech.",
+  title: "Talent by Digital — Remote Careers for Pakistani Professionals",
+  description: "Talent by Digital connects skilled Pakistani professionals with US, Canadian, and international companies hiring remote Marketing, Sales, Creative, and Digital talent.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
