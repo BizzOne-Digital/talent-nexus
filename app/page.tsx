@@ -55,6 +55,23 @@ const LinkedInIcon = () => (
     <rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" />
   </svg>
 );
+const InstagramIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+const UploadIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" y1="3" x2="12" y2="15" />
+  </svg>
+);
+const FacebookIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H16.7V3.7C16.4 3.65 15.4 3.55 14.24 3.55c-2.4 0-4.04 1.46-4.04 4.15V9.9H7.5V13h2.7v8h3.3z" />
+  </svg>
+);
 const GlobeSvg = () => (
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
     <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" />
@@ -154,6 +171,7 @@ export default function Page() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [contactMode, setContactMode] = useState<"candidate" | "company">("candidate");
   const [formData, setFormData] = useState({ name: "", company: "", email: "", role: "", message: "" });
+  const [cvFile, setCvFile] = useState<File | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -569,7 +587,7 @@ export default function Page() {
               {[
                 { icon: <EmailIcon />, label: "Email", value: "hire@talentbydigital.pk" },
                 { icon: <PhoneIcon />, label: "WhatsApp", value: "+92 300 000 0000" },
-                { icon: <LocationIcon />, label: "Based in", value: "Karachi, Pakistan" },
+                { icon: <LocationIcon />, label: "Based in", value: "Peshawar, Pakistan" },
               ].map((c, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 18 }}>
                   <div style={{ width: 42, height: 42, borderRadius: 11, background: "rgba(126,200,50,0.08)", border: "1px solid rgba(126,200,50,0.18)", display: "flex", alignItems: "center", justifyContent: "center", color: "#7EC832", flexShrink: 0 }}>{c.icon}</div>
@@ -580,11 +598,17 @@ export default function Page() {
                 </div>
               ))}
               <div style={{ display: "flex", gap: 10, marginTop: 30 }}>
-                <a href="#" style={{ width: 42, height: 42, borderRadius: 11, background: "#111", border: "1px solid #1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", color: "#777", textDecoration: "none", transition: "all 0.2s" }}
-                  onMouseOver={e => { e.currentTarget.style.borderColor = "#7EC832"; e.currentTarget.style.color = "#7EC832"; }}
-                  onMouseOut={e => { e.currentTarget.style.borderColor = "#1e1e1e"; e.currentTarget.style.color = "#777"; }}>
-                  <LinkedInIcon />
-                </a>
+                {[
+                  { icon: <InstagramIcon />, href: "https://www.instagram.com/talentbydigital/" },
+                  { icon: <LinkedInIcon />, href: "#" },
+                  { icon: <FacebookIcon />, href: "#" },
+                ].map((s, i) => (
+                  <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" style={{ width: 42, height: 42, borderRadius: 11, background: "#111", border: "1px solid #1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", color: "#777", textDecoration: "none", transition: "all 0.2s" }}
+                    onMouseOver={e => { e.currentTarget.style.borderColor = "#7EC832"; e.currentTarget.style.color = "#7EC832"; }}
+                    onMouseOut={e => { e.currentTarget.style.borderColor = "#1e1e1e"; e.currentTarget.style.color = "#777"; }}>
+                    {s.icon}
+                  </a>
+                ))}
               </div>
             </div>
           </Reveal>
@@ -659,6 +683,22 @@ export default function Page() {
                   onBlur={e => (e.target.style.borderColor = "#252525")} />
               </div>
 
+              {contactMode === "candidate" && (
+                <div style={{ marginBottom: 26 }}>
+                  <label style={{ display: "block", fontSize: "0.75rem", color: "#777", fontWeight: 500, marginBottom: 7 }}>Attach Your CV</label>
+                  <label htmlFor="cv-upload" style={{
+                    display: "flex", alignItems: "center", gap: 10, width: "100%", background: "#0D0D0D",
+                    border: `1px dashed ${cvFile ? "#7EC832" : "#333"}`, borderRadius: 10, padding: "12px 16px",
+                    color: cvFile ? "#7EC832" : "#666", fontSize: "0.85rem", cursor: "pointer", transition: "border-color 0.2s",
+                  }}>
+                    <UploadIcon />
+                    {cvFile ? cvFile.name : "Click to upload PDF, DOC, or DOCX (max 5MB)"}
+                  </label>
+                  <input id="cv-upload" type="file" accept=".pdf,.doc,.docx" style={{ display: "none" }}
+                    onChange={e => setCvFile(e.target.files && e.target.files[0] ? e.target.files[0] : null)} />
+                </div>
+              )}
+
               <button style={{ width: "100%", background: "linear-gradient(135deg, #7EC832, #F5C200)", color: "#000", fontWeight: 700, fontSize: "0.95rem", padding: "14px", borderRadius: 11, border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, transition: "opacity 0.2s, transform 0.2s", fontFamily: "inherit" }}
                 onMouseOver={e => { e.currentTarget.style.opacity = "0.88"; e.currentTarget.style.transform = "scale(1.01)"; }}
                 onMouseOut={e => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "scale(1)"; }}>
@@ -677,7 +717,7 @@ export default function Page() {
             <Image src="/logo.png" alt="Talent by Digital" width={34} height={34} style={{ objectFit: "contain" }} />
             <div>
               <div style={{ fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.06em" }}><span style={{ color: "#7EC832" }}>TALENT</span> <span style={{ color: "#fff" }}>BY DIGITAL</span></div>
-              <div style={{ fontSize: "0.58rem", color: "#444", letterSpacing: "0.14em", textTransform: "uppercase" }}>Karachi, Pakistan</div>
+              <div style={{ fontSize: "0.58rem", color: "#444", letterSpacing: "0.14em", textTransform: "uppercase" }}>Peshawar, Pakistan</div>
             </div>
           </a>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
