@@ -484,11 +484,11 @@ export default function Page() {
                 <Image src="/about.png" alt="Remote professional" fill style={{ objectFit: "cover" }} />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,10,10,0.65) 0%, transparent 55%)" }} />
               </div>
-              <div style={{ position: "absolute", bottom: -18, left: -18, background: "#111", border: "1px solid #222", borderRadius: 16, padding: "14px 18px", animation: "tnFloatSmall 5s ease-in-out infinite", maxWidth: 190 }}>
+              <div className="tn-float-badge" style={{ position: "absolute", bottom: -18, left: -18, background: "#111", border: "1px solid #222", borderRadius: 16, padding: "14px 18px", animation: "tnFloatSmall 5s ease-in-out infinite", maxWidth: 190 }}>
                 <div style={{ color: "#7EC832", marginBottom: 4 }}><GlobeSvg /></div>
                 <div style={{ fontSize: "0.78rem", color: "#ddd", fontWeight: 700 }}>US &amp; Canada Focused</div>
               </div>
-              <div style={{ position: "absolute", top: -18, right: -18, background: "#111", border: "1px solid #222", borderRadius: 16, padding: "14px 18px", animation: "tnFloatSmall 5s ease-in-out infinite 0.5s", maxWidth: 190 }}>
+              <div className="tn-float-badge" style={{ position: "absolute", top: -18, right: -18, background: "#111", border: "1px solid #222", borderRadius: 16, padding: "14px 18px", animation: "tnFloatSmall 5s ease-in-out infinite 0.5s", maxWidth: 190 }}>
                 <div style={{ color: "#F5C200", marginBottom: 4 }}><TargetSvg /></div>
                 <div style={{ fontSize: "0.78rem", color: "#ddd", fontWeight: 700 }}>Marketing &amp; Sales Specialists</div>
               </div>
@@ -758,6 +758,7 @@ export default function Page() {
           .tn-desktop-nav,.tn-desktop-cta { display: none !important; }
           .tn-mobile-btn { display: block !important; }
           .tn-mosaic { grid-template-columns: 1fr !important; }
+          .tn-float-badge { left: 8px !important; right: 8px !important; max-width: none !important; }
         }
         *{box-sizing:border-box;}
         input,textarea,button{font-family:inherit;}
