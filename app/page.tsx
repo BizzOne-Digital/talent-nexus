@@ -142,7 +142,7 @@ const openRoles = [
 
 const whyPoints = [
   "Work directly with vetted US, Canadian, and international companies",
-  "Fully remote roles — work from anywhere in Pakistan",
+  "Fully remote roles — work from anywhere in Pakistan, India, or the Philippines",
   "Free for candidates — we never charge job seekers",
   "Transparent process from application to offer",
   "Ongoing support even after you're placed",
@@ -150,7 +150,7 @@ const whyPoints = [
 ];
 
 const agencyPoints = [
-  "Source skilled Pakistani professionals across Marketing, Sales, and Digital roles",
+  "Source skilled professionals from Pakistan, India, and the Philippines across Marketing, Sales, and Digital roles",
   "Screen and evaluate candidates for skills, experience, and communication",
   "Match candidates with suitable open positions",
   "Support the interview, offer, and onboarding process",
@@ -162,7 +162,7 @@ const faqs = [
   { q: "What roles do you place candidates in?", a: "We focus primarily on Marketing and Sales roles — including Meta Ads, Google Ads, SEO, Content, Social Media, Sales, and Appointment Setting — along with Creative and Digital roles like Graphic Design, Video Editing, and Web Development." },
   { q: "Do I need prior experience with international clients?", a: "Not necessarily. We evaluate your actual skills, communication ability, and reliability. Prior international client experience is a plus but not always required." },
   { q: "How does the application process work?", a: "You explore open roles, apply with your details, go through a short screening with our team, and if you're a good fit, we match you with a suitable international company for interviews." },
-  { q: "Do you also work with companies looking to hire?", a: "Yes. Talent by Digital is a Pakistan-based recruitment agency. Alongside helping candidates find roles, we help US, Canadian, and other international companies source, screen, and hire skilled Pakistani professionals." },
+  { q: "Do you also work with companies looking to hire?", a: "Yes. Talent by Digital is a Pakistan-based recruitment agency. Alongside helping candidates find roles, we help US, Canadian, and other international companies source, screen, and hire skilled professionals from Pakistan, India, and the Philippines." },
 ];
 
 export default function Page() {
@@ -213,7 +213,7 @@ export default function Page() {
               <div style={{ fontSize: "0.95rem", fontWeight: 800, letterSpacing: "0.06em", lineHeight: 1.15 }}>
                 <span style={{ color: "#7EC832" }}>TALENT</span>&nbsp;<span style={{ color: "#fff" }}>BY DIGITAL</span>
               </div>
-              <div style={{ fontSize: "0.58rem", color: "#555", letterSpacing: "0.16em", textTransform: "uppercase" }}>Remote Careers · Pakistan</div>
+              <div style={{ fontSize: "0.58rem", color: "#555", letterSpacing: "0.16em", textTransform: "uppercase" }}>Remote Careers · Pakistan, India &amp; Philippines</div>
             </div>
           </a>
 
@@ -270,7 +270,7 @@ export default function Page() {
             <Reveal delay={0}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(126,200,50,0.08)", border: "1px solid rgba(126,200,50,0.25)", color: "#7EC832", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "6px 14px", borderRadius: 100, marginBottom: 28 }}>
                 <svg width="7" height="7" viewBox="0 0 8 8" className="tn-pulse-dot"><circle cx="4" cy="4" r="4" fill="#7EC832" /></svg>
-                Remote Careers for Pakistani Professionals
+                Remote Careers for Pakistan, India &amp; Philippines
               </div>
             </Reveal>
 
@@ -285,7 +285,7 @@ export default function Page() {
 
             <Reveal delay={220}>
               <p style={{ fontSize: "clamp(1rem, 1.8vw, 1.15rem)", color: "#999", lineHeight: 1.75, marginBottom: 40, maxWidth: 600 }}>
-                Talent by Digital connects skilled Pakistani professionals with US, Canadian, and international companies hiring remote Marketing, Sales, Creative, and Digital talent.
+                Talent by Digital connects skilled professionals across Pakistan, India, and the Philippines with US, Canadian, and international companies hiring remote Marketing, Sales, Creative, and Digital talent.
               </p>
             </Reveal>
 
@@ -306,7 +306,7 @@ export default function Page() {
 
             <Reveal delay={460}>
               <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, background: "#111", border: "1px solid #222", borderRadius: 100, padding: "8px 18px", fontSize: "0.8rem", fontWeight: 700 }}>🇵🇰 Pakistan Talent</div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, background: "#111", border: "1px solid #222", borderRadius: 100, padding: "8px 16px", fontSize: "0.78rem", fontWeight: 700 }}>🇵🇰 🇮🇳 🇵🇭 South Asian Talent</div>
                 <ArrowRight />
                 <div style={{ display: "flex", alignItems: "center", gap: 10, background: "#111", border: "1px solid #7EC832", borderRadius: 100, padding: "9px 20px", fontSize: "0.82rem", fontWeight: 800, color: "#7EC832" }}>🇺🇸 USA</div>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, background: "#111", border: "1px solid #7EC832", borderRadius: 100, padding: "9px 20px", fontSize: "0.82rem", fontWeight: 800, color: "#7EC832" }}>🇨🇦 Canada</div>
@@ -327,7 +327,7 @@ export default function Page() {
                 Build Your Career in{" "}
                 <span style={{ background: "linear-gradient(135deg, #7EC832, #F5C200)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Marketing &amp; Sales</span>
               </h2>
-              <p style={{ color: "#777", maxWidth: 560, margin: "0 auto", lineHeight: 1.7, fontSize: "0.95rem" }}>We place Pakistani professionals into remote roles with international companies — with a focus on Marketing and Sales, plus Creative and Digital positions.</p>
+              <p style={{ color: "#777", maxWidth: 560, margin: "0 auto", lineHeight: 1.7, fontSize: "0.95rem" }}>We place professionals from Pakistan, India, and the Philippines into remote roles with international companies — with a focus on Marketing and Sales, plus Creative and Digital positions.</p>
             </div>
           </Reveal>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", marginBottom: 64 }}>
@@ -424,7 +424,7 @@ export default function Page() {
                   <h3 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: 8 }}>{job.title}</h3>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 14 }}>
                     <span style={{ fontSize: "0.72rem", color: "#7EC832", background: "rgba(126,200,50,0.08)", border: "1px solid rgba(126,200,50,0.2)", borderRadius: 100, padding: "4px 11px" }}>{job.dept}</span>
-                    <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.72rem", color: "#999", background: "#151515", border: "1px solid #222", borderRadius: 100, padding: "4px 11px" }}><LocationIcon />Remote · Pakistan</span>
+                    <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.72rem", color: "#999", background: "#151515", border: "1px solid #222", borderRadius: 100, padding: "4px 11px" }}><LocationIcon />Remote</span>
                     <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.72rem", color: "#999", background: "#151515", border: "1px solid #222", borderRadius: 100, padding: "4px 11px" }}><ClockIcon />{job.type}</span>
                   </div>
                   <p style={{ color: "#999", lineHeight: 1.6, fontSize: "0.85rem", marginBottom: 16 }}>{job.desc}</p>
@@ -468,7 +468,7 @@ export default function Page() {
                 Your Career, Backed by{" "}
                 <span style={{ background: "linear-gradient(135deg, #7EC832, #F5C200)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Real Support.</span>
               </h2>
-              <p style={{ color: "#777", lineHeight: 1.8, marginBottom: 36, fontSize: "0.93rem" }}>We know that finding a genuine remote job with an international company can be difficult. Talent by Digital exists to make that path clear, honest, and free for Pakistani professionals.</p>
+              <p style={{ color: "#777", lineHeight: 1.8, marginBottom: 36, fontSize: "0.93rem" }}>We know that finding a genuine remote job with an international company can be difficult. Talent by Digital exists to make that path clear, honest, and free for professionals across Pakistan, India, and the Philippines.</p>
               {whyPoints.map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 14 }}>
                   <div style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(126,200,50,0.12)", border: "1px solid rgba(126,200,50,0.35)", display: "flex", alignItems: "center", justifyContent: "center", color: "#7EC832", flexShrink: 0, marginTop: 2 }}><CheckIcon /></div>
@@ -505,7 +505,7 @@ export default function Page() {
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: 18 }}>
               Looking for{" "}<span style={{ background: "linear-gradient(135deg, #7EC832, #F5C200)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Skilled Talent?</span>
             </h2>
-            <p style={{ color: "#999", lineHeight: 1.8, marginBottom: 32, fontSize: "0.95rem" }}>Talent by Digital helps international companies find, screen, and connect with skilled Pakistani professionals for remote roles in Marketing, Sales, Creative, and Digital positions.</p>
+            <p style={{ color: "#999", lineHeight: 1.8, marginBottom: 32, fontSize: "0.95rem" }}>Talent by Digital helps international companies find, screen, and connect with skilled professionals from Pakistan, India, and the Philippines for remote roles in Marketing, Sales, Creative, and Digital positions.</p>
             <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "linear-gradient(135deg, #7EC832, #F5C200)", color: "#000", fontWeight: 700, fontSize: "0.95rem", padding: "14px 32px", borderRadius: 100, textDecoration: "none", transition: "transform 0.2s, box-shadow 0.2s" }}
               onMouseOver={e => { e.currentTarget.style.transform = "scale(1.03)"; e.currentTarget.style.boxShadow = "0 12px 40px rgba(126,200,50,0.35)"; }}
               onMouseOut={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; }}>
@@ -525,7 +525,7 @@ export default function Page() {
                 A Pakistan-Based Recruitment &amp; Talent-Hunting Agency
               </h2>
               <p style={{ color: "#999", lineHeight: 1.8, fontSize: "0.92rem" }}>
-                Talent by Digital is a recruitment agency based in Pakistan. Alongside connecting candidates with career opportunities, we work directly with international companies to help them build remote teams from Pakistan's talent pool.
+                Talent by Digital is a recruitment agency headquartered in Pakistan. Alongside connecting candidates with career opportunities, we work directly with international companies to help them build remote teams from talent pools across Pakistan, India, and the Philippines.
               </p>
             </div>
           </Reveal>
@@ -583,7 +583,7 @@ export default function Page() {
               <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: 18, lineHeight: 1.2 }}>
                 Ready to Take the{" "}<span style={{ background: "linear-gradient(135deg, #7EC832, #F5C200)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Next Step?</span>
               </h2>
-              <p style={{ color: "#777", lineHeight: 1.8, marginBottom: 40, fontSize: "0.93rem" }}>Whether you're looking for your next remote career move or your team needs skilled Pakistani talent, reach out and we'll get back to you within 24 hours.</p>
+              <p style={{ color: "#777", lineHeight: 1.8, marginBottom: 40, fontSize: "0.93rem" }}>Whether you're looking for your next remote career move or your team needs skilled talent from Pakistan, India, or the Philippines, reach out and we'll get back to you within 24 hours.</p>
               {[
                 { icon: <EmailIcon />, label: "Email", value: "hire@talentbydigital.pk" },
                 { icon: <PhoneIcon />, label: "WhatsApp", value: "+92 300 000 0000" },
